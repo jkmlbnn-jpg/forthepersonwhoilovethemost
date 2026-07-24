@@ -1,0 +1,869 @@
+/* =======================================================
+   GENERAL WEBSITE SETTINGS
+======================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(
+    135deg,
+    #fff6f8,
+    #ffd6e3,
+    #ffc4d8,
+    #ffe8ef);
+
+    color:#444;
+
+    overflow-x:hidden;
+
+}
+
+/* =======================================================
+   SECTION
+======================================================= */
+
+section{
+
+    section{
+
+    width:100%;
+    min-height:100vh;
+
+    padding:120px 8% 80px;
+
+}
+}
+
+/* =======================================================
+   HEADINGS
+======================================================= */
+
+h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:4.8rem;
+
+    color:#ff5f93;
+
+    line-height:1.2;
+
+}
+
+h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3rem;
+
+    color:#ff5f93;
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+h3{
+
+    color:#ff6b9b;
+
+    margin-top:20px;
+
+}
+
+p{
+
+    line-height:1.8;
+
+    font-size:1.05rem;
+
+}
+
+/* =======================================================
+   HERO SECTION
+======================================================= */
+
+#hero{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:60px;
+
+}
+
+/* ---------------- LEFT SIDE ---------------- */
+
+.hero-content{
+
+    flex:1;
+
+}
+
+.hero-content span{
+
+    display:block;
+
+    color:#ff4d88;
+
+}
+
+.hero-content p{
+
+    margin:30px 0;
+
+    max-width:500px;
+
+    font-size:1.1rem;
+
+}
+
+/* Button */
+
+.hero-content a{
+
+    display:inline-block;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    background:#ff6b9b;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(255,105,160,.25);
+
+}
+
+.hero-content a:hover{
+
+    transform:translateY(-4px);
+
+    background:#ff4d88;
+
+}
+
+/* ---------------- RIGHT SIDE ---------------- */
+
+.hero-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:470px;
+
+    border-radius:28px;
+
+    border:8px solid #ffb6ca;
+
+    box-shadow:0 25px 60px rgba(255,120,170,.35);
+
+    transition:.4s;
+
+}
+
+.hero-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* =======================================================
+   LETTER SECTION
+======================================================= */
+
+#letter{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.letter-container{
+
+    width:100%;
+    max-width:850px;
+
+    background:#fffdfd;
+
+    padding:60px;
+
+    border-radius:30px;
+
+    border:10px solid #ffe3ea;
+
+    box-shadow:0 20px 50px rgba(255,120,170,.25);
+
+    position:relative;
+
+}
+
+/* Decorative tape */
+
+.letter-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+    height:35px;
+
+    background:#ff9fb7;
+
+    top:-18px;
+    left:40px;
+
+    transform:rotate(-18deg);
+
+    border-radius:6px;
+
+    opacity:.9;
+
+}
+
+.letter-container h2{
+
+    text-align:left;
+
+    margin-bottom:30px;
+
+}
+
+.letter-container p{
+
+    white-space:pre-line;
+
+    font-size:1.1rem;
+
+    line-height:2;
+
+    color:#555;
+
+}
+
+/* =======================================================
+   APPRECIATION
+======================================================= */
+
+#appreciation{
+
+    text-align:center;
+
+}
+
+.appreciation-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.app-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.app-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(255,120,170,.25);
+
+}
+
+.app-card img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+}
+
+.app-card h3{
+
+    margin:20px;
+
+    color:#ff5d95;
+
+}
+
+.app-card p{
+
+    padding:0 25px 30px;
+
+    color:#666;
+
+}
+
+/* =======================================================
+   OUR LAST DATE
+======================================================= */
+
+#last-date{
+
+    text-align:center;
+
+}
+
+.last-date-intro{
+
+    max-width:700px;
+
+    margin:0 auto 50px;
+
+    color:#666;
+
+}
+
+.last-date-gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.date-card{
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    background:white;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.date-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.date-card img{
+
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+/* =======================================================
+   NAVIGATION BAR
+======================================================= */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(12px);
+
+    z-index:1000;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+}
+
+.logo{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:2rem;
+
+    color:#ff5b92;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#444;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#ff5b92;
+
+}
+/* =======================================================
+   SCROLL REVEAL ANIMATION
+======================================================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(70px);
+
+    transition:all .9s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* =======================================================
+   LIGHTBOX
+======================================================= */
+
+#lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.9);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:9999;
+
+}
+
+#lightbox.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+#lightbox img{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+
+}
+
+#close-lightbox{
+
+    position:absolute;
+
+    top:30px;
+
+    right:40px;
+
+    color:white;
+
+    font-size:3rem;
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+/* ===========================================
+   IMAGE LIGHTBOX
+=========================================== */
+
+#lightbox {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.85);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 9999;
+
+}
+
+
+#lightbox.active {
+
+    opacity: 1;
+    visibility: visible;
+
+}
+
+
+#lightbox-image {
+
+    max-width: 85%;
+    max-height: 85%;
+
+    border-radius: 15px;
+
+}
+
+
+#close-lightbox {
+
+    position: absolute;
+
+    top: 30px;
+    right: 40px;
+
+    font-size: 50px;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+/* ===========================================
+   SMOOTH SCROLLING
+=========================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===========================================
+   MOBILE RESPONSIVE DESIGN
+=========================================== */
+
+@media (max-width: 768px) {
+
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    h1 {
+        font-size: 35px;
+    }
+
+
+    h2 {
+        font-size: 28px;
+    }
+
+
+    p {
+        font-size: 16px;
+    }
+
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    .memory-card,
+    .app-card,
+    .date-card {
+
+        width: 90%;
+        margin: auto;
+
+    }
+
+
+    nav {
+
+        flex-direction: column;
+        gap: 15px;
+
+    }
+
+
+}
+
+/* ===========================================
+   FLOATING HEARTS BACKGROUND
+=========================================== */
+
+.hearts {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: -1;
+
+}
+
+
+.hearts::before {
+
+    content: "♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥";
+
+    position: absolute;
+
+    width: 100%;
+
+    color: rgba(255, 105, 180, 0.25);
+
+    font-size: 30px;
+
+    animation: floatHearts 12s linear infinite;
+
+}
+
+
+@keyframes floatHearts {
+
+    0% {
+
+        transform: translateY(100vh);
+
+    }
+
+
+    100% {
+
+        transform: translateY(-100vh);
+
+    }
+
+}
+
+/* ===========================================
+   HERO SECTION
+=========================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+}
+
+
+.hero-content {
+
+    animation: fadeUp 1.5s ease;
+
+}
+
+
+.hero h1 {
+
+    font-size: 55px;
+
+    color: #d63384;
+
+}
+
+
+.hero p {
+
+    font-size: 20px;
+
+    margin: 20px 0;
+
+}
+
+
+.hero-button {
+
+    display: inline-block;
+
+    padding: 12px 30px;
+
+    background: #d63384;
+
+    color: white;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+
+}
+
+
+.hero-button:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.letter {
+    text-align: justify;
+}
+
+/* ===========================================
+   MEMORIES
+=========================================== */
+
+.memory-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.memory-card {
+    width: 320px;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.memory-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    margin-bottom: 15px;
+}

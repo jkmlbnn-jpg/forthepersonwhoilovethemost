@@ -1,0 +1,153 @@
+/* =======================================================
+   MOBILE RESPONSIVE DESIGN
+======================================================= */
+
+@media (max-width: 768px){
+
+
+    /* NAVIGATION */
+
+    nav{
+
+        flex-direction:column;
+
+        padding:15px 5%;
+
+        gap:15px;
+
+    }
+
+
+    nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+
+    nav a{
+
+        font-size:.85rem;
+
+    }
+
+
+
+    /* GENERAL */
+
+    section{
+
+        padding:120px 5% 70px;
+
+    }
+
+
+
+    h1{
+
+        font-size:3.2rem;
+
+        text-align:center;
+
+    }
+
+
+    h2{
+
+        font-size:2.5rem;
+
+    }
+
+
+    p{
+
+        font-size:.95rem;
+
+    }
+
+
+
+    /* HERO */
+
+    #hero{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        gap:40px;
+
+    }
+
+
+    .hero-content p{
+
+        margin:25px auto;
+
+    }
+
+
+    .hero-image img{
+
+        max-width:350px;
+
+    }
+
+
+
+    /* MEMORY CARDS */
+
+    .memory-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .memory-card img{
+
+        height:380px;
+
+    }
+
+
+
+    /* APPRECIATION */
+
+    .appreciation-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .app-card img{
+
+        height:380px;
+
+    }
+
+
+
+    /* LAST DATE */
+
+    .last-date-gallery{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .date-card img{
+
+        height:450px;
+
+    }
+
+
+}
+
