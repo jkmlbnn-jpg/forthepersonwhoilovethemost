@@ -81,3 +81,33 @@ document.addEventListener("keydown",(e)=>{
     }
 
 });
+
+
+document.addEventListener("click", function (e) {
+
+    for (let i = 0; i < 6; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.innerHTML = "❤️";
+
+        heart.classList.add("click-heart");
+
+        heart.style.left = e.clientX + "px";
+
+        heart.style.top = e.clientY + "px";
+
+        heart.style.fontSize = (12 + Math.random() * 18) + "px";
+
+        heart.style.transform =
+            `translate(${(Math.random()-0.5)*80}px, ${(Math.random()-0.5)*80}px)`;
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 1000);
+
+    }
+
+});

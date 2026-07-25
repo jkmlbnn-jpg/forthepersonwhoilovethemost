@@ -867,3 +867,35 @@ html {
     display: block;
     margin-bottom: 15px;
 }
+
+.click-heart{
+
+    position: fixed;
+
+    pointer-events: none;
+
+    animation: popHeart 1s forwards;
+
+    z-index: 1000;
+
+}
+
+@keyframes popHeart{
+
+    0%{
+
+        opacity:1;
+
+        transform:translate(0,0) scale(0.5);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translate(var(--x,0),-80px) scale(1.8);
+
+    }
+
+}
