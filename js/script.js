@@ -111,3 +111,22 @@ document.addEventListener("click", function (e) {
     }
 
 });
+
+/* ===========================================
+   BACKGROUND MUSIC
+=========================================== */
+
+const music = document.getElementById("bg-music");
+const musicButton = document.getElementById("music-toggle");
+
+musicButton.addEventListener("click", () => {
+
+    if (music.paused) {
+        music.play();
+        musicButton.textContent = "⏸ Pause Our Song";
+    } else {
+        music.pause();
+        musicButton.textContent = "🎵 Play Our Song";
+    }
+
+});

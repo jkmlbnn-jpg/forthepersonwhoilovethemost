@@ -136,7 +136,8 @@ p{
 
 /* Button */
 
-.hero-content a{
+.hero-content a,
+.hero-content button{
 
     display:inline-block;
 
@@ -156,9 +157,16 @@ p{
 
     box-shadow:0 10px 25px rgba(255,105,160,.25);
 
+    border:none;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
 }
 
-.hero-content a:hover{
+.hero-content a:hover,
+.hero-content button:hover{
 
     transform:translateY(-4px);
 
@@ -897,5 +905,25 @@ html {
         transform:translate(var(--x,0),-80px) scale(1.8);
 
     }
+
+}
+
+.hero-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.music-btn{
+    display: block;
+    margin: 15px auto 0;
+}
+
+.music-btn{
+
+    margin-top: 15px;
+
+    display: inline-block;
 
 }
