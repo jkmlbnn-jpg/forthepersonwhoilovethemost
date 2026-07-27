@@ -927,3 +927,558 @@ html {
     display: inline-block;
 
 }
+
+/* ======================================
+        PHOTO ALBUM PAGE
+====================================== */
+
+.album-page{
+
+    padding:100px 10%;
+
+    text-align:center;
+
+}
+
+.album-page h1{
+
+    color:#ff5c8d;
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.album-page p{
+
+    color:#666;
+
+    margin-bottom:50px;
+
+}
+
+.album-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+.album-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.1);
+
+    transition:.3s;
+
+}
+
+.album-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.album-card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+}
+
+.album-card h3{
+
+    margin:20px 0 10px;
+
+}
+
+.album-card p{
+
+    padding:0 20px;
+
+}
+
+.album-card a{
+
+    display:inline-block;
+
+    margin:20px;
+
+    padding:12px 28px;
+
+    background:#ff6b9b;
+
+    color:white;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+}
+
+/* =========================================================
+   PHOTO ALBUM GALLERY
+   Used by:
+   - albums/dates.html
+   - albums/first-monthsary.html
+   - albums/christmas.html
+   - albums/birthday.html
+
+   Displays 4 thumbnails per row on desktop.
+========================================================= */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin:50px 0;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* =========================================================
+   PHOTO ALBUM GALLERY
+   Used by:
+   - albums/dates.html
+   - albums/first-monthsary.html
+   - albums/christmas.html
+   - albums/birthday.html
+
+   Displays 4 thumbnails per row on all devices.
+========================================================= */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin:50px 0;
+
+}
+
+.gallery-grid img,
+.gallery-grid video{
+
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.gallery-grid img:hover,
+.gallery-grid video:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ========================================================= */
+/* GALLERY LIGHTBOX                                          */
+/* ========================================================= */
+
+#lightbox {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.85);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+}
+
+
+/* Active state */
+
+#lightbox.active {
+
+    display: flex;
+
+}
+
+
+/* Close button */
+
+#close-lightbox {
+
+    position: absolute;
+
+    top: 25px;
+    right: 35px;
+
+    font-size: 40px;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+/* Image and video container */
+
+.lightbox-content {
+
+    max-width: 85%;
+    max-height: 85%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* Image */
+
+#lightbox-image {
+
+    max-width: 85vw;
+    max-height: 85vh;
+
+    border-radius: 15px;
+
+}
+
+
+/* Video */
+
+#lightbox-video {
+
+    max-width:85vw;
+
+    max-height:85vh;
+
+    width:auto;
+
+    height:auto;
+
+    object-fit:contain;
+
+    border-radius:15px;
+
+}
+
+
+/* Navigation buttons */
+
+#prev-btn,
+#next-btn {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: rgba(255,255,255,0.2);
+
+    color: white;
+
+    border: none;
+
+    font-size: 40px;
+
+    padding: 15px 20px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+}
+
+
+#prev-btn {
+
+    left: 30px;
+
+}
+
+
+#next-btn {
+
+    right: 30px;
+
+}
+
+
+#prev-btn:hover,
+#next-btn:hover {
+
+    background: rgba(255,255,255,0.4);
+
+}
+/* Mobile adjustment */
+
+@media(max-width:600px){
+
+    #prev-btn,
+    #next-btn{
+
+        font-size:25px;
+
+        padding:10px 15px;
+
+    }
+
+
+    #close-lightbox{
+
+        font-size:32px;
+
+    }
+
+}
+.gallery-video.playing{
+
+    aspect-ratio:auto;
+
+    object-fit:contain;
+
+}
+.gallery-video{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+}
+.gallery-video:fullscreen{
+    width:auto;
+    height:auto;
+    aspect-ratio:auto;
+    object-fit:contain;
+}
+
+/* ======================================
+   ALBUM SELECTION BUTTONS
+====================================== */
+
+.album-card a{
+
+    display:inline-block;
+
+    margin:20px;
+
+    padding:14px 35px;
+
+    background:#ff6b9b;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    box-shadow:0 10px 25px rgba(255,105,160,.25);
+
+    transition:.3s;
+
+}
+
+
+.album-card a:hover{
+
+    transform:translateY(-5px);
+
+    background:#ff4d88;
+
+    box-shadow:0 15px 35px rgba(255,105,160,.35);
+
+}
+
+
+/* ======================================
+   BACK HOME BUTTON
+====================================== */
+
+.album-page > a{
+
+    display:inline-block;
+
+    margin-top:50px;
+
+    padding:14px 35px;
+
+    background:white;
+
+    color:#ff5f93;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    border:2px solid #ffb6ca;
+
+    transition:.3s;
+
+}
+
+
+.album-page > a:hover{
+
+    background:#ff6b9b;
+
+    color:white;
+
+    transform:translateY(-5px);
+
+}
+
+/* ======================================
+   ALBUM INSIDE NAVIGATION BUTTONS
+====================================== */
+
+.album-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-top:50px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.album-navigation a{
+
+    display:inline-block;
+
+    padding:14px 35px;
+
+    background:white;
+
+    color:#ff5f93;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    border:2px solid #ffb6ca;
+
+    box-shadow:0 10px 25px rgba(255,105,160,.15);
+
+    transition:.3s;
+
+}
+
+
+.album-navigation a:hover{
+
+    background:#ff6b9b;
+
+    color:white;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(255,105,160,.35);
+
+}
+/* ======================================
+   ALL ALBUM PAGE TYPOGRAPHY
+====================================== */
+
+.album-page h1{
+
+    font-size:3rem;
+
+}
+
+
+.album-page p{
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+}
+/* ======================================
+   ALBUM NAVIGATION BUTTONS
+====================================== */
+
+.album-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-top:50px;
+
+    flex-wrap:nowrap;
+
+}

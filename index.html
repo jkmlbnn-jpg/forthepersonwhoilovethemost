@@ -23,9 +23,9 @@
     <link rel="stylesheet" href="css/responsive.css">
 
 </head>
-
+ 
 <body>
-
+<div class="hearts"></div>
 <!-- ========================================================= -->
 <!-- NAVIGATION BAR                                            -->
 <!-- ========================================================= -->
@@ -114,6 +114,10 @@
         <button id="music-toggle" class="btn music-btn">
     🎵 Play Our Song
 </button>
+
+<a href="album.html">
+    📸 Our Photo Album
+</a>
 
     </div>
 
@@ -397,24 +401,26 @@
 <!-- ========================================================= -->
 
 <!-- ========================================================= -->
-<!-- IMAGE LIGHTBOX                                            -->
+<!-- GALLERY LIGHTBOX                                          -->
 <!-- ========================================================= -->
 
 <div id="lightbox">
 
     <span id="close-lightbox">&times;</span>
 
-    <img id="lightbox-image" src="" alt="Expanded Photo">
+    <button id="prev-btn">&#10094;</button>
 
-</div>
+    <div class="lightbox-content">
 
-<!-- IMAGE LIGHTBOX -->
+        <img id="lightbox-image" src="" alt="Expanded Photo">
 
-<div id="lightbox">
+        <video id="lightbox-video" controls style="display:none;">
+            <source src="" type="video/mp4">
+        </video>
 
-    <span id="close-lightbox">&times;</span>
+    </div>
 
-    <img id="lightbox-image">
+    <button id="next-btn">&#10095;</button>
 
 </div>
 
@@ -427,4 +433,3 @@
 </body>
 
 </html>
-

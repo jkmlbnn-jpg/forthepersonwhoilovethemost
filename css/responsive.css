@@ -150,4 +150,92 @@
 
 
 }
+/* ======================================
+   ALBUM PAGES MOBILE TEXT MATCH
+====================================== */
 
+@media(max-width:768px){
+
+    .album-page h1{
+
+        font-size:3.2rem !important;
+
+        text-align:center;
+
+    }
+
+
+    .album-page p{
+
+        font-size:1rem !important;
+
+        line-height:1.8;
+
+        max-width:90%;
+
+        margin:auto;
+
+    }
+
+}
+/* ======================================
+   ALBUM PAGES SAME STYLE AS ALBUM.HTML
+====================================== */
+
+@media(max-width:768px){
+
+    .album-page p{
+
+        font-family:'Poppins', sans-serif;
+
+        font-size:1.05rem !important;
+
+        line-height:1.8;
+
+        color:#444;
+
+        max-width:90%;
+
+        margin:auto;
+
+    }
+
+}
+/* ======================================
+   MOBILE ALBUM GALLERY SIZE
+====================================== */
+
+@media(max-width:768px){
+
+    .gallery-grid{
+
+        grid-template-columns:repeat(4,1fr);
+
+        gap:10px;
+
+        margin:30px 5px;
+
+    }
+
+
+    .gallery-grid img,
+    .gallery-grid video{
+
+        border-radius:10px;
+
+    }
+
+}
+@media(max-width:768px){
+
+    .album-navigation{
+
+        flex-direction:row;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+}

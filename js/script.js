@@ -26,13 +26,12 @@ window.addEventListener("scroll",revealSections);
 
 revealSections();
 
-
 /* ===========================================
    IMAGE LIGHTBOX
 =========================================== */
 
 const images = document.querySelectorAll(
-".memory-card img, .app-card img, .date-card img"
+".memory-card img, .app-card img, .date-card img, .gallery-grid img"
 );
 
 const lightbox = document.getElementById("lightbox");
@@ -54,34 +53,40 @@ images.forEach(image=>{
 });
 
 
-closeButton.addEventListener("click",()=>{
+if(closeButton){
 
-    lightbox.classList.remove("active");
-
-});
-
-
-lightbox.addEventListener("click",(e)=>{
-
-    if(e.target===lightbox){
+    closeButton.addEventListener("click",()=>{
 
         lightbox.classList.remove("active");
 
-    }
+    });
 
-});
+}
 
+
+if(lightbox){
+
+    lightbox.addEventListener("click",(e)=>{
+
+        if(e.target===lightbox){
+
+            lightbox.classList.remove("active");
+
+        }
+
+    });
+
+}
 
 document.addEventListener("keydown",(e)=>{
 
-    if(e.key==="Escape"){
+    if(e.key==="Escape" && lightbox){
 
         lightbox.classList.remove("active");
 
     }
 
 });
-
 
 document.addEventListener("click", function (e) {
 
@@ -119,14 +124,97 @@ document.addEventListener("click", function (e) {
 const music = document.getElementById("bg-music");
 const musicButton = document.getElementById("music-toggle");
 
-musicButton.addEventListener("click", () => {
 
-    if (music.paused) {
-        music.play();
-        musicButton.textContent = "⏸ Pause Our Song";
-    } else {
-        music.pause();
-        musicButton.textContent = "🎵 Play Our Song";
+if (music) {
+
+    let savedTime = localStorage.getItem("musicTime");
+    let musicPaused = localStorage.getItem("musicPaused");
+
+
+    if(savedTime){
+
+        music.currentTime = savedTime;
+
     }
+
+
+    if(musicPaused !== "true"){
+
+        music.play().catch(()=>{});
+
+    }
+
+
+    music.addEventListener("timeupdate",()=>{
+
+        localStorage.setItem(
+            "musicTime",
+            music.currentTime
+        );
+
+    });
+
+
+    if(musicButton){
+
+        musicButton.addEventListener("click",()=>{
+
+
+            if(music.paused){
+
+                music.play();
+
+                localStorage.setItem(
+                    "musicPaused",
+                    "false"
+                );
+
+                musicButton.textContent =
+                "⏸ Pause Our Song";
+
+
+            }else{
+
+                music.pause();
+
+                localStorage.setItem(
+                    "musicPaused",
+                    "true"
+                );
+
+                musicButton.textContent =
+                "🎵 Play Our Song";
+
+            }
+
+
+        });
+
+    }
+
+}
+
+/* ===========================================
+   VIDEO PLAYBACK
+=========================================== */
+
+const videos = document.querySelectorAll(".gallery-video");
+
+videos.forEach(video => {
+
+    video.addEventListener("play",()=>{
+
+        if(music){
+
+            music.pause();
+
+            localStorage.setItem(
+                "musicPaused",
+                "true"
+            );
+
+        }
+
+    });
 
 });
