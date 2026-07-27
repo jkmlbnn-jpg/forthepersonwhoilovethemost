@@ -500,71 +500,7 @@ nav a:hover{
 
     transform:translateY(0);
 
-}
 
-/* =======================================================
-   LIGHTBOX
-======================================================= */
-
-#lightbox{
-
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(0,0,0,.9);
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    opacity:0;
-
-    visibility:hidden;
-
-    transition:.3s;
-
-    z-index:9999;
-
-}
-
-#lightbox.active{
-
-    opacity:1;
-
-    visibility:visible;
-
-}
-
-#lightbox img{
-
-    max-width:90%;
-
-    max-height:90%;
-
-    border-radius:20px;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.5);
-
-}
-
-#close-lightbox{
-
-    position:absolute;
-
-    top:30px;
-
-    right:40px;
-
-    color:white;
-
-    font-size:3rem;
-
-    cursor:pointer;
-
-    user-select:none;
 
 }
 
@@ -608,10 +544,12 @@ nav a:hover{
 #lightbox-image {
 
     max-width: 85%;
+
     max-height: 85%;
 
     border-radius: 15px;
 
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
 }
 
 
@@ -627,6 +565,8 @@ nav a:hover{
     color: white;
 
     cursor: pointer;
+
+    user-select:none;
 
 }
 
@@ -1480,5 +1420,16 @@ html {
     margin-top:50px;
 
     flex-wrap:nowrap;
+
+}
+/* ======================================
+   HERO ALBUM BUTTON SPACING
+====================================== */
+
+.album-btn{
+
+    display:inline-block;
+
+    margin-top:20px;
 
 }
