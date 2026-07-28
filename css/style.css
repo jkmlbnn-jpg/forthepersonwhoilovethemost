@@ -632,63 +632,6 @@ html {
 }
 
 /* ===========================================
-   FLOATING HEARTS BACKGROUND
-=========================================== */
-
-.hearts {
-
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    pointer-events: none;
-
-    overflow: hidden;
-
-    z-index: -1;
-
-}
-
-
-.hearts::before {
-
-    content: "♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥";
-
-    position: absolute;
-
-    width: 100%;
-
-    color: rgba(255, 105, 180, 0.25);
-
-    font-size: 30px;
-
-    animation: floatHearts 12s linear infinite;
-
-}
-
-
-@keyframes floatHearts {
-
-    0% {
-
-        transform: translateY(100vh);
-
-    }
-
-
-    100% {
-
-        transform: translateY(-100vh);
-
-    }
-
-}
-
-/* ===========================================
    HERO SECTION
 =========================================== */
 
@@ -975,56 +918,21 @@ html {
    - albums/first-monthsary.html
    - albums/christmas.html
    - albums/birthday.html
-
-   Displays 4 thumbnails per row on desktop.
 ========================================================= */
 
-.gallery-grid{
+.album-page{
 
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:20px;
-
-    margin:50px 0;
-
-}
-
-.gallery-grid img{
+    padding:100px 15px;
 
     width:100%;
 
-    aspect-ratio:1/1;
+    max-width:1600px;
 
-    object-fit:cover;
+    margin:auto;
 
-    border-radius:15px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    text-align:center;
 
 }
-
-.gallery-grid img:hover{
-
-    transform:scale(1.05);
-
-}
-
-/* =========================================================
-   PHOTO ALBUM GALLERY
-   Used by:
-   - albums/dates.html
-   - albums/first-monthsary.html
-   - albums/christmas.html
-   - albums/birthday.html
-
-   Displays 4 thumbnails per row on all devices.
-========================================================= */
 
 .gallery-grid{
 
@@ -1032,13 +940,11 @@ html {
 
     grid-template-columns:repeat(4,1fr);
 
-    gap:15px;
+    gap:8px;
 
-    width:95%;
+    width:100%;
 
-    max-width:1400px;
-
-    margin:50px auto;
+    margin:40px auto;
 
 }
 
