@@ -1072,55 +1072,6 @@ html {
 
 }
 
-
-/* Navigation buttons */
-
-#prev-btn,
-#next-btn {
-
-    position: absolute;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    background: rgba(255,255,255,0.2);
-
-    color: white;
-
-    border: none;
-
-    font-size: 40px;
-
-    padding: 15px 20px;
-
-    cursor: pointer;
-
-    border-radius: 50%;
-
-}
-
-
-#prev-btn {
-
-    left: 30px;
-
-}
-
-
-#next-btn {
-
-    right: 30px;
-
-}
-
-
-#prev-btn:hover,
-#next-btn:hover {
-
-    background: rgba(255,255,255,0.4);
-
-}
 /* Mobile adjustment */
 
 @media(max-width:600px){

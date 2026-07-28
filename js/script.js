@@ -27,31 +27,99 @@ window.addEventListener("scroll",revealSections);
 revealSections();
 
 /* ===========================================
-   IMAGE LIGHTBOX
+   IMAGE & VIDEO LIGHTBOX
 =========================================== */
 
-const images = document.querySelectorAll(
-".memory-card img, .app-card img, .date-card img, .gallery-grid img"
+// Get every image and video inside galleries
+const mediaItems = document.querySelectorAll(
+".memory-card img, .app-card img, .date-card img, .gallery-grid img, .gallery-grid video"
 );
 
 const lightbox = document.getElementById("lightbox");
-
 const lightboxImage = document.getElementById("lightbox-image");
+const lightboxVideo = document.getElementById("lightbox-video");
 
 const closeButton = document.getElementById("close-lightbox");
+const prevButton = document.getElementById("prev-btn");
+const nextButton = document.getElementById("next-btn");
 
-images.forEach(image=>{
+let currentMediaIndex = 0;
 
-    image.addEventListener("click",()=>{
+function showMedia(index){
+
+    const media = mediaItems[index];
+
+    if(media.tagName === "IMG"){
+
+        lightboxVideo.pause();
+        lightboxVideo.style.display = "none";
+
+        lightboxImage.style.display = "block";
+        lightboxImage.src = media.src;
+
+    }
+
+    else{
+
+        lightboxImage.style.display = "none";
+
+        lightboxVideo.style.display = "block";
+        lightboxVideo.src = media.querySelector("source").src;
+
+        lightboxVideo.load();
+    }
+
+}
+
+mediaItems.forEach((media, index) => {
+
+    media.addEventListener("click", () => {
+
+        currentMediaIndex = index;
 
         lightbox.classList.add("active");
 
-        lightboxImage.src = image.src;
+        showMedia(currentMediaIndex);
 
     });
 
 });
 
+if (nextButton) {
+
+    nextButton.addEventListener("click", () => {
+
+        currentMediaIndex++;
+
+        if (currentMediaIndex >= mediaItems.length) {
+
+            currentMediaIndex = 0;
+
+        }
+
+        showMedia(currentMediaIndex);
+
+    });
+
+}
+
+if (prevButton) {
+
+    prevButton.addEventListener("click", () => {
+
+        currentMediaIndex--;
+
+        if (currentMediaIndex < 0) {
+
+            currentMediaIndex = mediaItems.length - 1;
+
+        }
+
+        showMedia(currentMediaIndex);
+
+    });
+
+}
 
 if(closeButton){
 
@@ -62,7 +130,6 @@ if(closeButton){
     });
 
 }
-
 
 if(lightbox){
 
