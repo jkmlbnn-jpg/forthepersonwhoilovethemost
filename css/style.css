@@ -1032,9 +1032,13 @@ html {
 
     grid-template-columns:repeat(4,1fr);
 
-    gap:20px;
+    gap:15px;
 
-    margin:50px 0;
+    width:95%;
+
+    max-width:1400px;
+
+    margin:50px auto;
 
 }
 

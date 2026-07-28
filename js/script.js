@@ -124,73 +124,29 @@ document.addEventListener("click", function (e) {
 const music = document.getElementById("bg-music");
 const musicButton = document.getElementById("music-toggle");
 
+if (music && musicButton) {
 
-if (music) {
+    music.currentTime = 0;
 
-    let savedTime = localStorage.getItem("musicTime");
-    let musicPaused = localStorage.getItem("musicPaused");
+    musicButton.addEventListener("click", () => {
 
+        if (music.paused) {
 
-    if(savedTime){
+            music.play();
 
-        music.currentTime = savedTime;
+            musicButton.textContent = "⏸ Pause Our Song";
 
-    }
+        } else {
 
+            music.pause();
 
-    if(musicPaused !== "true"){
+            music.currentTime = 0;
 
-        music.play().catch(()=>{});
+            musicButton.textContent = "🎵 Play Our Song";
 
-    }
-
-
-    music.addEventListener("timeupdate",()=>{
-
-        localStorage.setItem(
-            "musicTime",
-            music.currentTime
-        );
+        }
 
     });
-
-
-    if(musicButton){
-
-        musicButton.addEventListener("click",()=>{
-
-
-            if(music.paused){
-
-                music.play();
-
-                localStorage.setItem(
-                    "musicPaused",
-                    "false"
-                );
-
-                musicButton.textContent =
-                "⏸ Pause Our Song";
-
-
-            }else{
-
-                music.pause();
-
-                localStorage.setItem(
-                    "musicPaused",
-                    "true"
-                );
-
-                musicButton.textContent =
-                "🎵 Play Our Song";
-
-            }
-
-
-        });
-
-    }
 
 }
 
