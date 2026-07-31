@@ -1294,3 +1294,36 @@ html {
     margin-top:20px;
 
 }
+#media-counter{
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:rgba(0,0,0,.55);
+
+    color:#fff;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    z-index:1002;
+
+    user-select:none;
+
+    opacity:1;
+
+    transition:opacity .4s ease;
+
+}

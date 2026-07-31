@@ -38,12 +38,15 @@ const mediaItems = document.querySelectorAll(
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightbox-image");
 const lightboxVideo = document.getElementById("lightbox-video");
+const mediaCounter = document.getElementById("media-counter");
 
 const closeButton = document.getElementById("close-lightbox");
 const prevButton = document.getElementById("prev-btn");
 const nextButton = document.getElementById("next-btn");
 
 let currentMediaIndex = 0;
+
+let counterTimeout;
 
 function showMedia(index){
 
@@ -68,6 +71,31 @@ function showMedia(index){
 
         lightboxVideo.load();
     }
+
+    if (mediaCounter) {
+
+    mediaCounter.textContent =
+        `${index + 1} / ${mediaItems.length}`;
+
+    showCounter();
+
+}
+
+}
+
+function showCounter() {
+
+    if (!mediaCounter) return;
+
+    mediaCounter.style.opacity = "1";
+
+    clearTimeout(counterTimeout);
+
+    counterTimeout = setTimeout(() => {
+
+        mediaCounter.style.opacity = "0";
+
+    }, 2000);
 
 }
 
