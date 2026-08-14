@@ -239,3 +239,16 @@
     }
 
 }
+/* ======================================
+   LETTER ALBUM MOBILE SPACING
+====================================== */
+
+@media (max-width: 768px){
+
+    .diary-btn{
+
+        margin-top: 15px;
+
+    }
+
+}

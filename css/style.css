@@ -1327,3 +1327,263 @@ html {
     transition:opacity .4s ease;
 
 }
+/* ===========================================
+   DIARY LETTER CARDS
+=========================================== */
+
+.diary-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.diary-card {
+    width: 100%;
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 25px 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition: 0.3s;
+
+    box-sizing: border-box;
+}
+
+.diary-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.diary-card-content {
+    flex: 1;
+    user-select: none;
+}
+
+.diary-card-content h3 {
+    margin: 0 0 8px;
+    user-select: none;
+}
+
+.diary-card-content span {
+    font-size: 14px;
+    opacity: 0.7;
+    user-select: none;
+}
+
+.diary-card-arrow {
+    font-size: 28px;
+    margin-left: 20px;
+    user-select: none;
+}
+/* ===========================================
+   DIARY MOBILE
+=========================================== */
+
+@media (max-width: 768px) {
+
+    .diary-list {
+        width: 100%;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .diary-card {
+        width: 100%;
+        min-height: 90px;
+
+        padding: 20px;
+
+        border-radius: 14px;
+    }
+
+    .diary-card-content h3 {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .diary-card-content span {
+        font-size: 13px;
+    }
+
+    .diary-card-arrow {
+        font-size: 24px;
+        margin-left: 15px;
+    }
+
+}
+/* ===========================================
+   DIARY LETTER POPUP
+=========================================== */
+
+.letter-popup {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    z-index: 9999;
+}
+
+
+/* ===========================================
+   LETTER BOX
+=========================================== */
+
+.letter-popup-content {
+    position: relative;
+
+    width: min(800px, 100%);
+    max-height: 85vh;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 50px;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+
+    color: #333;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ===========================================
+   CLOSE BUTTON
+=========================================== */
+
+.close-letter {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.08);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.close-letter:hover {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+
+/* ===========================================
+   LETTER TITLE
+=========================================== */
+
+.letter-popup-content h2 {
+    margin: 0 50px 8px 0;
+
+    font-size: 30px;
+}
+
+
+/* ===========================================
+   LETTER DATE
+=========================================== */
+
+.letter-popup-content > span {
+    display: block;
+
+    margin-bottom: 30px;
+
+    font-size: 14px;
+
+    opacity: 0.6;
+}
+
+
+/* ===========================================
+   LETTER TEXT
+=========================================== */
+
+.letter-text {
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    white-space: pre-line;
+}
+
+
+/* ===========================================
+   MOBILE
+=========================================== */
+
+@media (max-width: 768px) {
+
+    .letter-popup {
+        padding: 15px;
+    }
+
+    .letter-popup-content {
+        width: 100%;
+        max-height: 90vh;
+
+        padding: 35px 25px;
+
+        border-radius: 16px;
+    }
+
+    .letter-popup-content h2 {
+        font-size: 23px;
+
+        margin-right: 40px;
+    }
+
+    .letter-text {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .close-letter {
+        top: 12px;
+        right: 12px;
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 18px;
+    }
+
+}
