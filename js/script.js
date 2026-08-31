@@ -78,7 +78,7 @@ if (music && musicButton) {
 
             music.play();
 
-            musicButton.textContent = "⏸ Pause Our Song";
+            musicButton.textContent = "⏸ Pause Song";
 
         } else {
 
@@ -86,7 +86,7 @@ if (music && musicButton) {
 
             music.currentTime = 0;
 
-            musicButton.textContent = "🎵 Play Our Song";
+            musicButton.textContent = "🎵 Play Song";
 
         }
 
