@@ -35,4 +35,24 @@ const letters = [
         `
     },
 
+{
+        title: "It's Your Ghost That Still Haunts Me",
+        date: "November 9, 2026",
+        content: `
+
+
+            It's already November, and honestly, I'm doing my best to move forward. But every time, in every moment, something reminds me of you.
+
+            Honestly, I've never been happier than when I was with you. Every time I look into someone else's eyes, it's you I see. It's you I remember.
+
+            You may have already forgotten about me, but your memories still live in my heart. Your ghost still haunts me in every person I talk to, in every familiar smile, and in every little thing that reminds me of you.
+
+            "August" by Taylor Swift will always remind me of you. Ironically, it's funny how a song can bring back so many memories, but anyways...
+
+            I hope you find your true happiness, even if it's not with me.
+
+            I miss you, Joshi.
+                `
+    },
+
 ];
